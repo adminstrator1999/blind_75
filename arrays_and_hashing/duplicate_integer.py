@@ -8,8 +8,7 @@ class Solution:
     def hasDuplicate2(self, nums: List[int]) -> bool:
         original_numbers = set()
         for num in nums:
-            if num not in original_numbers:
-                original_numbers.add(num)
-            else:
+            if num in original_numbers:
                 return True
+            original_numbers.add(num)
         return False
