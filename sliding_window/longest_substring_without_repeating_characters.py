@@ -29,5 +29,3 @@ class Solution:
 s = ""
 solution = Solution()
 print(solution.lengthOfLongestSubstring(s))
-
-print(" ".join("longest_substring_without_repeating_characters".split("_")))
