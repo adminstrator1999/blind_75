@@ -11,14 +11,14 @@ class Solution:
             if nums[mid] < curr_min:
                 curr_min = nums[mid]
 
-            if nums[start] < nums[mid]:
+            if nums[mid] > nums[end]:
                 # search right side
                 start = mid + 1
             else:
                 # search left side
                 end = mid - 1
 
-        return curr_min
+        return min(curr_min, nums[start])
 
 
 
