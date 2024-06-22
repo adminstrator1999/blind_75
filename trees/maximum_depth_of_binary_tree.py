@@ -26,8 +26,10 @@ class Solution:
         return depth
 
     def maxDepthDFS(self, root: Optional[TreeNode]) -> int:
+        if not root:
+            return 0
         stack = [(root, 1)]
-        res = 0
+        res = 1
 
         while stack:
             node, depth = stack.pop()
