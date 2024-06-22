@@ -21,15 +21,17 @@ class Solution:
         slow.next = slow.next.next
         return res.next
     """
-        slow, fast = ListNode(next=head), head
-        res = slow
-        while n > 0:
-            fast = fast.next
-            n -= 1
-            
-        while fast:
-            slow = slow.next
-            fast = fast.next
+        dummy = ListNode(0, head)
+        left = dummy
+        right = head
 
-        slow.next = slow.next.next
-        return res.next"""
+        while n > 0:
+            right = right.next
+            n -= 1
+
+        while right:
+            left = left.next
+            right = right.next
+
+        left.next = left.next.next
+        return dummy.next"""
