@@ -17,3 +17,16 @@ class Solution:
             prev = curr
             curr = temp
         return prev
+
+    def reverseListRecursive(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head:
+            return None
+        new_head = head
+        nxt = head.next
+        if nxt:
+            new_head = self.reverseListRecursive(head.next)
+            nxt.next = head
+        head.next = None
+        return new_head
+
+
