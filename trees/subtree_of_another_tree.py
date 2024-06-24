@@ -6,7 +6,7 @@ from trees.invert_binary_tree import TreeNode
 class Solution:
     def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
         if not subRoot:
-            return False
+            return True
         if not root:
             return False
 
