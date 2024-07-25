@@ -44,7 +44,7 @@ class Solution:
             if row not in range(ROWS) or \
                     col not in range(COLS) or \
                     board[row][col] not in node.children or \
-                    node.children[board[r][c]].refs < 1 or \
+                    node.children[board[row][col]].refs < 1 or \
                     (row, col) in visits:
                 return
 
